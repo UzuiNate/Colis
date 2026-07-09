@@ -1,0 +1,9 @@
+.carte {
+    border-top:4px solid #ffbe55;
+    border-radius: 4px;
+    text-align: center;
+    background:#fafbf6 ;
+    margin:  10px;
+    width: 100px;
+    height: fit-content;
+}
