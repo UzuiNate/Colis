@@ -1,4 +1,3 @@
-import Popup from '../shared/Popup'
 import '../style/Envoyer.css'
 
 function Envoyer() {
