@@ -23,8 +23,12 @@ let voiture = [
     }
 ]
 
+    const container = {
+        display: "flex"
+    }
 
     return <>
+    <div style={container}>
         {
         voiture.map((voiture)=> <div className="carte">
             <p>{voiture.id}</p>
@@ -35,5 +39,6 @@ let voiture = [
             <button>eto asiana sary supprimer</button>
         </div>)
         }
+    </div>
     </>
 } 
