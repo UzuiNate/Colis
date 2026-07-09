@@ -1,4 +1,3 @@
-import { useState } from "react";
 import '../style/carte.css'
 
 export default function CarteVoiture () {
