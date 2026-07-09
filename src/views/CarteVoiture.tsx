@@ -3,11 +3,6 @@ import '../style/carte.css'
 
 export default function CarteVoiture () {
 
-const [idvoiture, setIdVoiture] = useState("");
-const [design, setDesign] = useState("");
-const [codeitineraire, setCodeItineraire] = useState("");
-const [frais, setFrais] = useState("");
-
 let voiture = [
     {
         id: 12,
