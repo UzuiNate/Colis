@@ -1,0 +1,22 @@
+.recevoir-header {
+	display: flex;
+	height: 60px;
+	border-bottom: 2px solid #eeefea;
+	width: 100%;
+	padding: 10px 20px;
+	align-items: center;
+	place-content: space-between;
+}
+
+.recevoir-header h2 {
+	margin: 0;
+	padding: 0;
+	align-content: center;
+}
+
+.recevoir-search {
+	width: 300px;
+	height: 30px;
+	border-bottom: 1px solid #bea579;
+	display: flex;
+}

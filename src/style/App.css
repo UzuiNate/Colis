@@ -1,0 +1,21 @@
+@font-face {
+    font-family: nunito;
+    src: url(../Nunito-Regular.ttf);
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: nunito;
+}
+
+.main {
+	display: flex;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
