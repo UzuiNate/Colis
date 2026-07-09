@@ -31,6 +31,8 @@ let voiture = [
             <p>{voiture.design}</p>
             <p>{voiture.codeit}</p>
             <p>{voiture.frais}</p>
+            <button>eto asiana sary modifier</button>
+            <button>eto asiana sary supprimer</button>
         </div>)
         }
     </>
