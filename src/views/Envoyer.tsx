@@ -1,8 +1,9 @@
-import Popup from '../shared/Popup'
+//import Popup from '../shared/Popup'
 import '../style/Envoyer.css'
 
 function Envoyer() {
-	return <div style={{width: 'calc(100% - 340px)'}}>
+	return <>
+	<div style={{width: 'calc(100% - 340px)'}}>
 		{/*<Popup content="Supprimer l'element"/>
 		<div className="envoyer-header">
 			<h2>Envoyer</h2>
@@ -10,5 +11,7 @@ function Envoyer() {
 		</div>
 	</div>
 }*/}
+</div>
+</>}
 
 export default Envoyer;
