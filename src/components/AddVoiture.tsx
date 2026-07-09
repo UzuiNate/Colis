@@ -1,6 +1,13 @@
 import { useState } from "react";
+import addCss from "../style/AddVoiture.module.css"
+import Popup from "../shared/Popup";
 
-export default function AddVoiture() {
+interface pop{
+    onClose : ()=>void
+}
+export default function AddVoiture({
+    onClose
+} : pop) {
     const initial = {
         idVoi: "",
         designVoi: "",
@@ -12,6 +19,7 @@ export default function AddVoiture() {
     const [popupMess, setpopupMess] = useState("");
 
 
+    // Change the val of inpt for each typing
     const changeVal = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
 
@@ -21,6 +29,7 @@ export default function AddVoiture() {
         }));
     };
     
+    // API CALL HERE
     const submitForm = async (e: React.ChangeEvent<HTMLFormElement>)=>{
         e.preventDefault();
         try {
@@ -46,17 +55,27 @@ export default function AddVoiture() {
         }
     }
     
+
+    const close= ()=>{
+        setpopupMess("")
+        onClose()
+    }
     return (
-        <div>
-            <form onSubmit={submitForm}>
-                <p>Ajouter une voiture</p>
-                <div>
+        <div className={addCss.parent}>
+            {
+                popupMess && 
+                <Popup confirm={false} onConfirm={close} content={popupMess}/>
+            }
+            <form onSubmit={submitForm} className={addCss.form}>
+                <p className={addCss.txt}>Ajouter une voiture</p>
+                <div className={addCss.container}>
                     <input 
                         type="text" 
                         name="idVoi" 
                         value={infoVoit.idVoi} 
                         onChange={changeVal} 
                         placeholder="Matricule"
+                        className={addCss.input}
                     />
                     <input 
                         type="text" 
@@ -64,6 +83,7 @@ export default function AddVoiture() {
                         value={infoVoit.designVoi} 
                         onChange={changeVal} 
                         placeholder="Design"
+                        className={addCss.input}
                     />
                     <input 
                         type="text" 
@@ -71,6 +91,7 @@ export default function AddVoiture() {
                         value={infoVoit.code_It} 
                         onChange={changeVal} 
                         placeholder="Code itineraire"
+                        className={addCss.input}
                     />
                     <input 
                         type="number" 
@@ -78,9 +99,11 @@ export default function AddVoiture() {
                         value={infoVoit.frais} 
                         onChange={changeVal} 
                         placeholder="Frais"
+                        className={addCss.input}
                     />
                 </div>
-                <button>Envoyer</button>
+                <input className={addCss.button} type="submit" value="Envoyer" />
+                <input className={addCss.button} style={{textAlign:"center" }} onClick={onClose} type="reset" value="Annuler" />
             </form>
         </div>
     );
