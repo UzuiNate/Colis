@@ -1,4 +1,5 @@
 import '../style/Colis.css'
+import ListeColis from "./ListeColis" 
 
 function Colis() {
 	return <div style={{width: 'calc(100% - 340px)'}}>
@@ -11,6 +12,7 @@ function Colis() {
 				<input type="text" placeholder="rechercher colis"/>
 			</div>
 		</div>
+		<ListeColis/>
 	</div>
 }
 
