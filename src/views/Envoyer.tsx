@@ -8,7 +8,7 @@ function Envoyer() {
 		</div>
 		<div className="infos-colis">
 			<h2>Colis à envoyer</h2>
-			<form method="POST">
+			<form method="POST" className="form-envoyer">
 				<div className='infos'>
 					<div className="labels">
 					<label>Identifiant de la voiture :</label>
@@ -35,8 +35,6 @@ function Envoyer() {
 
 				</div>
 				<button type="submit">Soumettre</button>
-				
-				
 				
 			</form>
 		</div>

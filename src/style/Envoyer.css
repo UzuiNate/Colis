@@ -37,7 +37,7 @@
 	border-radius: 3% 3% 0 0;
 	
 }
-form{
+.form-envoyer{
 	margin-top: 5%;
 	margin-left: 5%;
 	font-size: 16px;
@@ -51,7 +51,7 @@ form{
 .infos{
 	display: flex;
 }
-form button{
+.form-envoyer button{
 	margin-top: 1%;
 	margin-left: 50%;
 	background-color: #ffbe55;
@@ -63,10 +63,10 @@ form button{
 	margin-bottom: 3%;
 	border: none;
 }
-form button:hover{
+.form-envoyer button:hover{
 	scale: 1.03;
 }
-input{
+.champs input{
 	margin-left: 7%;
 	width: 50%;
 	height: 30px;
@@ -74,7 +74,7 @@ input{
 	padding-left: 2%;
 	margin-bottom: 2%;
 }
-label{
+.labels label{
 	display: block;
 	margin-bottom: 11%;
 }

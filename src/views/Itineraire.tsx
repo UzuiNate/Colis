@@ -25,7 +25,7 @@ function Itineraire() {
 				method: 'POST',
 				credential: 'include',
 				body: JSON.stringify({
-					recherche: r
+					recherche: r,
 				})
 			})
 
