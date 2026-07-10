@@ -1,24 +1,24 @@
+import { useState, useEffect} from 'react'
 import '../style/carte.css'
 
 export default function CarteVoiture () {
 
-let voiture = [
-    {
-        id: 12,
-        design: "tututu",
-        codeit: 14,
-        frais: 12000
-    },
-    {
-        id: 10,
-        design: "totutu",
-        codeit: 13,
-        frais: 13000
+    const [voiture, setVoiture] = useState([]);
+    const [erreur, setErreur] = useState("");
+    
+    async function chargerVoiture() {
+        try{
+            const data= await fetch('URL ani francois', { method: 'GET' })
+            setVoiture(await data.json())
+            setErreur("")
+        }catch {setErreur("Erreur de chargement")}
     }
-]
 
+    useEffect(()=>{chargerVoiture();}, []);
+    
 
     return <>
+    <div className="voitureContener">
         {
         voiture.map((voiture)=> <div className="carte">
             <p>{voiture.id}</p>
@@ -29,5 +29,6 @@ let voiture = [
             <button>eto asiana sary supprimer</button>
         </div>)
         }
+    </div>
     </>
 } 

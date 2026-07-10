@@ -7,3 +7,11 @@
     width: 100px;
     height: fit-content;
 }
+
+.voitureContener{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: auto;
+    height: 500px;
+    overflow-y: scroll;
+}
