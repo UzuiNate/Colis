@@ -20,20 +20,23 @@ export default function CarteVoiture () {
             }
 
             const res = await response.json()
-            setItineraires(res)
+            setVoiture(res)
             console.log(res)
         }
         fetchItineraire()
     }, [])
 
     const container = {
-        display: "flex"
+        display: "flex",
+        flexWrap: 'wrap'
     }
 
     return <>
     <div style={container}>
         {
         voiture.map((voiture)=> <div className="carte">
+            <span className="voiture-info desgin" style={{marginRight: '10px'}}>{voiture.idVoi}</span>
+
             <svg fill="#000000" width="70px" height="70px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.83,10.75,19.3,8.45A1,1,0,0,0,18.46,8H15V6a1,1,0,0,0-1-1H4A1,1,0,0,0,3,6V16a1,1,0,0,0,1,1H6a2,2,0,0,1,4,0h6a2,2,0,0,1,4,0h1V11.3A1,1,0,0,0,20.83,10.75Z" strokeWidth="2" style={{fill: "#ffbe55"}}></path>
                 <path d="M15,6V17H10a2,2,0,0,0-4,0H4a1,1,0,0,1-1-1V6A1,1,0,0,1,4,5H14A1,1,0,0,1,15,6Zm5.83,4.75L19.3,8.45A1,1,0,0,0,18.46,8H15v9h1a2,2,0,0,1,4,0h1V11.3A1,1,0,0,0,20.83,10.75Z" fill="none" stroke="#bea579" strokeLinecap="round" strokeLinejoin="round" stroke-width="2"></path>
@@ -41,9 +44,9 @@ export default function CarteVoiture () {
             </svg>
 
             {/*<p className="voiture-info">{voiture.id}</p>*/}
-            <p className="voiture-info design">{voiture.design}</p>
-            <p className="voiture-info codeit">{voiture.codeit}</p>
-            <p className="voiture-info frais">{voiture.frais} Ar</p>
+            <p className="voiture-info design">{voiture.designVoi}</p>
+            <p className="voiture-info codeit">{voiture.code_It}</p>
+            <p className="voiture-info frais">{voiture.frais_Voi} Ar</p>
 
             <div className="voiture-card-action">
                 <button>
