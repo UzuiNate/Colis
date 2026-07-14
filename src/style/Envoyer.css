@@ -1,0 +1,87 @@
+.envoyer-header {
+	display: flex;
+	height: 60px;
+	border-bottom: 2px solid #eeefea;
+	width: 100%;
+	padding: 10px 20px;
+	align-items: center;
+	place-content: space-between;
+}
+
+.envoyer-header h2 {
+	margin: 0;
+	padding: 0;
+	align-content: center;
+}
+
+.colis-search {
+	width: 300px;
+	height: 30px;
+	border-bottom: 1px solid #bea579;
+	display: flex;
+}
+.infos-colis{
+	margin-top: 0;
+	width: 60%;
+	margin:auto;
+	border-radius: 5%;
+	/*background-color: #bea57944;*/
+	background-color: #fafbf6;
+	
+	
+}
+.infos-colis h2{
+	text-align:center;
+	background-color: #ffbe55;
+	padding: 2% 0 2% 0;
+	border-radius: 3% 3% 0 0;
+	
+}
+.form-envoyer{
+	margin-top: 5%;
+	margin-left: 5%;
+	font-size: 16px;
+	font-weight: 700;
+	display: block;
+	padding-right: 0%;
+	width: 130%;
+	align-items: center;
+	justify-content:center;
+}
+.infos{
+	display: flex;
+}
+.form-envoyer button{
+	margin-top: 1%;
+	margin-left: 50%;
+	background-color: #ffbe55;
+	font-weight: bold;
+	border-radius: 15px;
+	width: 150px;
+	padding: 1%;
+	font-size: 15px;
+	margin-bottom: 3%;
+	border: none;
+}
+.form-envoyer button:hover{
+	scale: 1.03;
+}
+.champs input{
+	/*margin-left: 7%;*/
+	width: 50%;
+	height: 30px;
+	border: none;
+	padding-left: 2%;
+	margin-bottom: 2%;
+}
+.labels label{
+	display: block;
+	margin-bottom: 11.5%;
+}
+.labels{
+	width: 50%;
+}
+.inputs{
+	width: 30%;
+	display: block;
+}

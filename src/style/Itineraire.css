@@ -1,0 +1,43 @@
+.itineraire-header {
+	display: flex;
+	height: 60px;
+	border-bottom: 2px solid #eeefea;
+	width: 100%;
+	padding: 10px 20px;
+	align-items: center;
+	place-content: space-between;
+}
+
+.itineraire-view {
+	width: calc(100% - 340px);
+}
+
+.itineraire-header h2 {
+	margin: 0;
+	padding: 0;
+	align-content: center;
+}
+
+.itineraire-search {
+	width: 300px;
+	height: 30px;
+	border-bottom: 1px solid #bea579;
+	display: flex;
+}
+
+.itineraire-search input[type="text"] {
+	width: 270px;
+	height: 30px;
+	background: transparent;
+	border: 0;
+	padding-left: 10px;
+	outline: none;
+}
+
+.itineraire-content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 20px;
+	width: 100%;
+}
